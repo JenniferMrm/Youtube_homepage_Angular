@@ -1,0 +1,58 @@
+<div class="thumbnail">
+  <img
+    class="thumbnail__image"
+    [src]="thumbnail.picture"
+    [alt]="thumbnail.title"
+  />
+  <div class="thumbnail__container">
+    <img
+      class="thumbnail__container__avatar"
+      [src]="thumbnail.avatar"
+      [alt]="thumbnail.author"
+    />
+    <div class="thumbnail__container__info">
+      <p class="thumbnail__container__info__title">{{ thumbnail.title }}</p>
+      <div class="thumbnail__container__info__author">
+        <p class="thumbnail__container__info__author__name">
+          {{ thumbnail.author }}
+        </p>
+        <i
+          class="thumbnail__container__info__author__badge fi fi-rs-badge-check"
+          *ngIf="thumbnail.isCertified"
+        ></i>
+      </div>
+      <div
+        class="thumbnail__container__info__live"
+        *ngIf="thumbnail.isLive; else isNotLive"
+      >
+        <p class="thumbnail__container__info__live__viewers">
+          {{ formatViews(thumbnail.viewers, 1) }} watching
+        </p>
+        <app-live></app-live>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #isNotLive>
+  <div class="thumbnail__container__info__basic-numeric-datas">
+    <p
+      class="thumbnail__container__info__basic-numeric-datas__views"
+      [ngStyle]="{
+        color:
+          thumbnail.views < 500000
+            ? 'green'
+            : thumbnail.views >= 500000 && thumbnail.views < 1000000
+            ? 'orange'
+            : thumbnail.views >= 1000000
+            ? 'red'
+            : 'black'
+      }"
+    >
+      {{ formatViews(thumbnail.views, 1) }} views •
+    </p>
+    <p class="thumbnail__container__info__basic-numeric-datas__timestamp">
+      {{ thumbnail.timestamp }}
+    </p>
+  </div>
+</ng-template>

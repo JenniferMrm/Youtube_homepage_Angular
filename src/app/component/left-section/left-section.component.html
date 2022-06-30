@@ -1,0 +1,28 @@
+<aside class="left-section">
+  <ul class="left-section__list left-section__list--top">
+    <app-list-item
+      *ngFor="let item of topListItems"
+      [item]="item"
+    ></app-list-item>
+  </ul>
+  <ul class="left-section__list left-section__list--middle">
+    <app-list-item
+      *ngFor="let item of middleListItems"
+      [item]="item"
+    ></app-list-item>
+  </ul>
+  <ul class="left-section__list left-section__list--subscriptions">
+    <h5 class="left-section__list left-section__list--subscriptions__title">
+      SUBSCRIPTIONS
+    </h5>
+    <app-list-item
+      *ngFor="let item of subscriptionItems"
+      [item]="item"
+      [hasIcon]="false"
+    ></app-list-item>
+  </ul>
+  <ul class="left-section__more-youtube">
+    <h5 class="left-section__more-youtube__title">MORE FROM YOUTUBE</h5>
+    <li class="left-section__more-youtube__content"></li>
+  </ul>
+</aside>

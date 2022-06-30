@@ -1,0 +1,11 @@
+.main-container {
+  display: flex;
+  flex-direction: row;
+
+  app-left-section {
+    width: 13%;
+  }
+  .nav-thumbnail-container {
+    width: 87%;
+  }
+}

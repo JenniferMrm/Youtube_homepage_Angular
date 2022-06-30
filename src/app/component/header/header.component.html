@@ -1,0 +1,34 @@
+<div class="header">
+  <div class="header__menu">
+    <i class="header__menu__icon-menu fi fi-rs-menu-burger"></i>
+    <img
+      class="header__menu__youtube-logo"
+      src="../../../assets/pictures/logo.png"
+      alt="youtube-logo"
+    />
+  </div>
+  <div class="header__search-bar">
+    <input
+      class="header__search-bar__input"
+      type="text"
+      placeholder="Search"
+      id="search-bar"
+      [(ngModel)]="searchValue"
+      (input)="retrieveSearchValue(searchValue)"
+    />
+    <button class="header__search-bar__button">
+      <i class="header__search-bar__button__icon-search fi fi-rs-search"></i>
+    </button>
+    <i class="header__search-bar__icon-mic fi fi-rs-microphone"></i>
+  </div>
+  <div class="header__tools">
+    <i class="header__tools__icon-cam fi fi-rs-video-camera"></i>
+    <i class="header__tools__icon-grid fi fi-rs-grid"></i>
+    <i class="header__tools__icon-bell fi fi-rs-bell"></i>
+    <img
+      class="header__tools__avatar"
+      src="../../../assets/pictures/youtubeAvatar.png"
+      alt="youtube user's icon"
+    />
+  </div>
+</div>

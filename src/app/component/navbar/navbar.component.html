@@ -1,0 +1,7 @@
+<nav class="navigation">
+  <app-chip
+    *ngFor="let chip of chips"
+    [chip]="chip"
+    (sendFilterValueToNav)="transitFilterValue($event)"
+  ></app-chip>
+</nav>

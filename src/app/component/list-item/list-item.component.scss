@@ -1,0 +1,21 @@
+.item-list {
+  padding: 12px 0 12px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &:hover {
+    background-color: #eee;
+  }
+
+  &__icon,
+  &__avatar {
+    margin: 0 16px 0 4px;
+  }
+
+  &__avatar {
+    border-radius: 100%;
+  }
+}

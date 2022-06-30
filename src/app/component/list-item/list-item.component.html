@@ -1,0 +1,11 @@
+<li class="item-list" *ngIf="hasIcon; else hasImage">
+  <i [class]="item.picValue" class="item-list__icon"></i>
+  <p class="item-list__content">{{ item.content }}</p>
+</li>
+
+<ng-template #hasImage>
+  <li class="item-list">
+    <img class="item-list__avatar" [src]="item.picValue" [alt]="item.content" />
+    <p class="item-list__content">{{ item.content }}</p>
+  </li>
+</ng-template>

@@ -1,0 +1,10 @@
+.navigation {
+  height: 56px;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 6px;
+}
